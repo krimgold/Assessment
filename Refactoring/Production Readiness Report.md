@@ -8,4 +8,3 @@ The current database obviously is not production-ready, so a proper SQL database
 If we address the scalability of this service it arises a number of topics for discussion, eg.:
 - using message queue to process orders by variable number of services.
 - data synchronization between service instances or database partitioning, etc.
-These are just first ideas that come to mind.
