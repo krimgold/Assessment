@@ -5,6 +5,8 @@ Logs are required for debugging and should contain error description, traceid of
 We also do not have "appsettings" for Staging and Prod environments. We need to add those to store environment specific settings.
 Might be useful to implement storing of secrets such as database connection strings or other sensitive data.
 The current database obviously is not production-ready, so a proper SQL database with proper schema should be created.
-If we address the scalability of this service it arises a number of topics for discussion, eg.:
+Another suggestion is to introduce the ORM tool to make querying the database more testable, maintainable and efficient. 
+We can use Entity Framework, if the queries are simple as the one in the example, or Dapper for more complex queries.
+If we address the scalability of this service it raises a number of topics for discussion, eg.:
 - using message queue to process orders by variable number of services.
 - data synchronization between service instances or database partitioning, etc.
